@@ -99,7 +99,7 @@ const config: PlaywrightTestConfig = {
 
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: "vite --port 3000",
+    command: "npx vite serve e2e --port 3000",
     port: 3000,
     reuseExistingServer: true,
   },
