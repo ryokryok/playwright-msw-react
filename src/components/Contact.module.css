@@ -1,0 +1,42 @@
+.contentContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30rem;
+}
+
+.formContainer {
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  border: solid 2px black;
+}
+
+.formItem {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+}
+
+.formLabel {
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.formInput {
+  font-size: 1rem;
+  padding: 0.25rem;
+  border: 2px solid #444;
+  border-radius: 0.25rem;
+}
+
+.formPrimaryButton {
+  width: 100%;
+  padding: 0.25rem;
+  font-size: 1rem;
+  background-color: #22e;
+  color: white;
+  border: 0;
+  border-radius: 0.25rem;
+}
