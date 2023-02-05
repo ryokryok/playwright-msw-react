@@ -1,4 +1,10 @@
-import { useState, ChangeEvent, FormEvent, useCallback } from "react";
+import {
+  useState,
+  ChangeEvent,
+  FormEvent,
+  useCallback,
+  useEffect,
+} from "react";
 import styles from "./Contact.module.css";
 
 type ApiProps = {
@@ -49,9 +55,13 @@ export const Contact: React.FC = () => {
     },
     [email]
   );
+  useEffect(() => {
+    document.title = "Contact";
+  }, []);
 
   return (
     <div className={styles.contentContainer}>
+      <h1 className={styles.pageTitle}>Contact</h1>
       <form
         method="post"
         className={styles.formContainer}
@@ -75,14 +85,16 @@ export const Contact: React.FC = () => {
             send
           </button>
         </div>
-        <div className={styles.formItem}>
-          {result === "success" && (
-            <div className={styles.successMessage}>success to contact</div>
-          )}
-          {result === "error" && (
-            <div className={styles.errorMessage}>error, please resend</div>
-          )}
-        </div>
+        {result !== "init" && (
+          <div className={styles.formItem}>
+            {result === "success" && (
+              <div className={styles.successMessage}>success to contact</div>
+            )}
+            {result === "error" && (
+              <div className={styles.errorMessage}>error, please resend</div>
+            )}
+          </div>
+        )}
       </form>
     </div>
   );

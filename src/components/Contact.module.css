@@ -1,7 +1,13 @@
+.pageTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+}
 .contentContainer {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
   height: 30rem;
 }
 
